@@ -93,14 +93,12 @@ def userInput(board):
                mv = "tie"
            else:
                mv = False
-
            #print(mv)
            return mv
        else:
             print("Already Taken.")
             userInput(board)
     
-
 def movePlayer(pos, board, s):
     draw(s, pos)
     checkwin = checkWin(board, s)
@@ -114,7 +112,6 @@ def movePlayer(pos, board, s):
         return t
     else:
         return False
-
 
 def randomNum(board):
     n = False
@@ -226,7 +223,6 @@ def checkWin(board,s):
         if (board[1] == s and board[5] == s and board[9] == s) or (board[3] == s and board[5] == s and board[7] == s):
             return True
 
-
 def drawWinLine(board, s):
     if s == "x":
         if (board[1] == s and board[2] == s and board[3] == s ):
@@ -263,9 +259,7 @@ def drawWinLine(board, s):
             drawDiagonalLineL(-140,190)
         elif (board[3] == s and board[5] == s and board[7] == s):
             drawDiagonalLineR(145,160)
-            
-
-        
+                   
 def drawHorizontalLine(x,y):
     z = turtle.Turtle()
     z.pu()
